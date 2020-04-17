@@ -1,0 +1,41 @@
+$cor-principal: #d39c41;
+$cor-segundaria: #100f1a;
+$font1: 'Arapey','Georgia', serif;
+$font2:  Arial, sans-serif;
+$large-device: 960px;
+$medium-device: 720px;
+$small-device: 400px;
+$gap:100px;
+$margin-titulo: 60px;
+
+@function em($px, $em: 16) {
+  @return ($px / $em) + em;
+}
+@mixin tamanho($valor, $line:1.3) {
+  @if $valor == 14 {
+    font-size: em($valor);
+  
+  }
+  @else if $valor == 18 {
+    font-size: em($valor);
+  
+  }
+  @else if $valor == 22 {
+    font-size: em($valor);
+  
+  }
+  @else if $valor == 26 {
+    font-size: em($valor);
+  
+  }
+  @else if $valor == 32 {
+    font-size: em($valor);
+  
+  }
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow; 
+}
