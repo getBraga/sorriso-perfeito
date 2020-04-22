@@ -2,12 +2,14 @@
 .header {
   width: 100%;
   background: $cor-principal;
-  padding: 1.2rem 0;
+  padding: 1.5rem 0;
   position: fixed;
-  top: 0px;
-  z-index: 10;
+  top: 0;
+  z-index: 1000;
   box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.3);
-
+  @include device(small) {
+    position: initial;
+  }
 }
 
 
@@ -22,14 +24,11 @@
 
  
    h1 {
-     text-transform: uppercase;
-     @include tamanho(32);
-     font-family: Georgia, 'Times New Roman', Times, serif;
-     @include device(small) {
-      text-align: center;
-      margin-left: 20px;
-      margin-right: 20px;
-    
+    @include tamanho(32);
+    font-family: Georgia, 'Times New Roman', Times, serif;   
+    text-transform: uppercase;
+    @include device(small) {
+     text-align: left;
   }
      &::after {
       content: '';
@@ -38,11 +37,7 @@
       height: 5px;
       margin-left: 1px;
       background: $cor-principal;
-      @include device(small) {
-        margin: 0 auto;
-
-      
-    }
+    
       
      }
    
@@ -65,18 +60,27 @@
 
  
    .img-historia  {
-   margin: 0 auto;
-   margin-top: $margin-titulo;
-   flex: 1;
-   margin-left: 10px;
-    margin-right: 10px;
+    flex: 1;
+    text-align: center;
+    margin:  0 auto;
+    max-width: 300px;
+    @include device(small) {
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+     } 
+  }
+    .img-historia img{
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
 
-   }
-   .img-historia img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin: 0 auto;
+      @include device(small) {
+       flex-direction: column;
+       width: 250px;
+       height: 250px;
+       text-align: center;
+      } 
 
     
    }
@@ -88,18 +92,24 @@
      justify-self: center;
      text-align: left;
      line-height: 1.7em; 
-     width: 450px;
+     max-width: 450px;
      flex: 1;
      font-family: $font1;
      height: 200px;
      @include device(small) {
       margin: 0 auto;
-    
-    
+      @include tamanho(14);  
   }
+ 
      h2 {
       opacity: 0.6;
       margin-right: 20px;
+      @include device(small) {
+        margin: 0 auto;
+        margin-right: 10px;
+      
+      
+    }
      
      }
      
@@ -153,7 +163,7 @@
         display: block;
         @include device(small) {
           margin: 0 auto;
-         text-align: center;
+         text-align: left;
       }
       }
       h1::after {
@@ -163,10 +173,7 @@
         height: 5px;
         margin-left: 1px;
         background: $cor-segundaria;
-        @include device(small) {
-          margin: 0 auto;
-         text-align: center;
-      }
+     
       }
         
    }
@@ -180,18 +187,28 @@
 }
   }
   .img-servicos {
-    margin: 0 auto;
-   margin-top: $margin-titulo;
-   flex: 1;
+    flex: 1;
+      text-align: center;
+      margin:  0 auto;
+      max-width: 300px;
+      @include device(small) {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+       } 
+    }
+      .img-servicos img{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
   
- 
-  }
-  .img-servicos img{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin: 0 auto;
- 
+        @include device(small) {
+         flex-direction: column;
+         width: 250px;
+         height: 250px;
+         text-align: center;
+        } 
+    
   }
   .h2-servicos {
     @include tamanho(18);
@@ -201,18 +218,21 @@
     justify-self: center;
     text-align: left;
     line-height: 1.7em; 
-    width: 450px;
+    max-width: 450px;
     flex: 1;
     font-family: $font1;
     height: 200px;
     @include device(small) {
      margin: 0 auto;
-   
-   
+     @include tamanho(14);  
  }
     h2 {
      opacity: 0.6;
      margin-right: 20px;
+     @include device(small) {
+      margin: 0 auto;  
+      margin-right: 10px;
+  }
     
     }
   }
@@ -258,7 +278,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;   
     text-transform: uppercase;
     @include device(small) {
-     text-align: center;
+     text-align: left;
   }
   }
   h1::after {
@@ -268,9 +288,7 @@
     height: 5px;
     margin-left: 1px;
     background: $cor-principal;
-    @include device(small) {
-      margin: 0 auto;
-  }
+ 
   }
 }
 
@@ -286,12 +304,24 @@
       flex: 1;
       text-align: center;
       margin:  0 auto;
+      max-width: 300px;
+      @include device(small) {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+       } 
     }
       .img-equipamento img{
         width: 300px;
         height: 300px;
         border-radius: 50%;
-        margin: 0 auto;
+  
+        @include device(small) {
+         flex-direction: column;
+         width: 250px;
+         height: 250px;
+         text-align: center;
+        } 
       }
 }
 
@@ -303,18 +333,24 @@
   justify-self: center;
   text-align: left;
   line-height: 1.7em; 
-  width: 450px;
+  max-width: 500px;
   flex: 1;
   font-family: $font1;
   height: 200px;
   @include device(small) {
    margin: 0 auto;
- 
+   @include tamanho(14);
  
 }
   h2 {
    opacity: 0.6;
    margin-right: 20px;
+   @include device(small) {
+    margin: 0 auto;
+    margin-right: 10px;
+  
+  
+ }
   
   }
 }
@@ -354,8 +390,8 @@
     margin-top: 5px;
     background: $cor-principal;
     width: 100%;
-  display: flex;
-   height: 60px;
+    display: flex;
+    height: 60px;
     align-items: center;
 
    
@@ -368,6 +404,7 @@
     flex: 1;
     @include device(small) {
       margin-left: 5px;
+      @include tamanho(14);
     }
    
     span {
@@ -382,6 +419,7 @@
     margin-right: 40px;
     @include device(small) {
       margin-right: 5px;
+      @include tamanho(14);
     }
   }
 }

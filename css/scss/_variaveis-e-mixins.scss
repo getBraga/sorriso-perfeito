@@ -22,6 +22,12 @@ $margin-titulo: 60px;
     font-size: em($valor);
   
   }
+
+  @else if $valor == 16 {
+    font-size: em($valor);
+  
+  }
+
   @else if $valor == 18 {
     font-size: em($valor);
   

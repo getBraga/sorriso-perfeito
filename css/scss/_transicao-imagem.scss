@@ -11,6 +11,9 @@
   color: $cor-segundaria;
   text-transform: uppercase;
   display: none;
+  @include device(small) {
+    margin-top: 0px;
+  }
   
    h1 {
     @include tamanho(32);
@@ -23,6 +26,7 @@
     @include device(small) {
       margin-left: 10px;
       margin-right: 10px;
+      @include tamanho(26);
   
   }
    
@@ -68,8 +72,9 @@
 
 .bg-principal-2 {
   width: 100%;
-	height: 380px;
-	background: url("../img/equipe.jpg") no-repeat center;
+  height: 380px;
+  background: url("../img/equipe.jpg") no-repeat center;
+  background-position: top;
 	background-size: cover;
 	margin-top: 92px;
 	text-align: center;
@@ -77,6 +82,9 @@
   color: $cor-segundaria;
   text-transform: uppercase;
   display: none;
+  @include device(small) {
+    margin-top: 0px;
+  }
   
    h1 {
     @include tamanho(32);
@@ -89,6 +97,7 @@
     @include device(small) {
       margin-left: 10px;
       margin-right: 10px;
+      @include tamanho(26);
   
   }
    
@@ -132,7 +141,8 @@
 .bg-principal-3 {
   width: 100%;
 	height: 380px;
-	background: url("../img/consultorio1.jpg") no-repeat center;
+  background: url("../img/consultorio1.jpg") no-repeat center;
+  background-position: top;
 	background-size: cover;
 	margin-top: 92px;
 	text-align: center;
@@ -140,6 +150,9 @@
   color: $cor-segundaria;
   text-transform: uppercase;
   display: none;
+  @include device(small) {
+    margin-top: 0px;
+  }
   
    h1 {
     @include tamanho(32);
@@ -152,6 +165,7 @@
     @include device(small) {
       margin-left: 10px;
       margin-right: 10px;
+      @include tamanho(26);
   
   }
    
