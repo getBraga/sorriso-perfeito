@@ -33,10 +33,14 @@
       }
       
   }
-
+  .ul-menu {
+    margin-right: 10px;
+    @include device(small) {
+      margin-right: 0px;
+    }
+  }
   .ul-menu li {
     display: inline;
-
     @include device(small) {
       display: none;
      }

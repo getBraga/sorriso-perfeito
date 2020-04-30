@@ -2,10 +2,10 @@
    max-width: $large-device;
    margin: 0 auto;
    margin-top: 200px;
-   
+   padding-left: 20px;
    @include device(small) {
      margin-top: $gap;
-     margin-left: 20px
+    
    }
  
  
@@ -115,9 +115,9 @@
   max-width: $large-device;
   margin: 0 auto;
   margin-top: $gap;
+  padding-left: 20px;
   @include device(small) {
     text-align: left;
-    margin-left: 20px;
  
  }
  
@@ -216,9 +216,9 @@ display: flex;
   max-width: $large-device;
   margin: 0 auto;
   margin-top: $gap;
+  padding-left: 20px;
   @include device(small) {
     text-align: left;
-    margin-left: 20px;
     padding-top: 0px;
  }
   h1 {
