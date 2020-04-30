@@ -1,0 +1,101 @@
+.contato{
+  max-width: $large-device;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding-left: 20px;
+  @include device(small) {
+    margin-top: $gap;
+  }
+
+  h1 {
+   @include tamanho(32);
+   font-family: Georgia, 'Times New Roman', Times, serif;   
+   text-transform: uppercase;
+   @include device(small) {
+    text-align: left;
+ }
+    &::after {
+     content: '';
+     display: block;
+     width: 40px;
+     height: 5px;
+     margin-left: 1px;
+     background: $cor-principal;
+   
+     
+    }
+  
+
+  }
+}
+
+.contato-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: $margin-titulo;
+  font-family: $font1;
+  @include tamanho(18);
+  @include device(small) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  ul {
+    flex: 1;
+  
+   li {
+     margin-top: 20px;
+    margin-bottom: 30px;
+    @include device(small){
+      margin-left: 25px
+    }
+    ;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $cor-principal;
+      margin-right: 5px;
+    }
+   }
+  }
+  form {
+    @include device(small){
+     margin-top: 40px;
+    }
+    flex: 1;
+      label {
+      
+        color: $cor-segundaria;
+      }
+      input {
+        background: none;
+        border: 2px solid $cor-principal;
+        padding: .3rem;
+        width: 70%;
+        margin-bottom: 10px;
+        outline-color: #fff;
+        @include device(small){
+          width: 100%;
+         }
+      }
+      textarea {
+        padding: .5rem;
+        width: 300px;
+        height: 100px;
+        border: 2px solid $cor-principal;
+        outline-color: #fff;
+      }
+      button {
+        text-transform: uppercase;
+        background: none;
+        border: 2px solid $cor-principal;
+        padding: .5rem;
+        cursor: pointer;
+      }
+
+  }
+}

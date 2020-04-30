@@ -9,13 +9,29 @@
         flex: 1;
         margin-left: 10px;
       }
-      .a-logo{
+      .a-logo {
         width: 200px;
+        height: 53px;
+  
+        background-image: url('../img/Sorriso Perfeito-logo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: top;
+        background-size: 100%;
+        
       }
-        .logo-menu img {
-          width: 100%;
-          
-        }
+      .a-logo a{
+        padding: 23px 100px;
+        position: relative;
+        top:15px;
+        
+      
+        z-index: 100px;
+       
+      
+        
+      }
+      
   }
 
   .ul-menu li {
@@ -49,7 +65,7 @@
 
 
   .entre-contato a {
-    background:#966c2a;
+    background:$segunda-principal;
     font-family: $font1;
     @include tamanho(18);
     padding: 1rem .5rem;
@@ -67,9 +83,10 @@
 
 
   .hamburguer  {
-    background: $cor-segundaria;
+    background: $segunda-principal;
     text-transform: uppercase;
-    border: 1px  solid #000;
+    border: 1px  solid $cor-segundaria;
+    outline-color: $cor-segundaria;
     display: none;
     padding: .5rem;
     margin-right: 20px;
@@ -158,7 +175,7 @@
 
 
   .ul-menu a:hover {
-    background: #966c2a;
+    background: $segunda-principal;
   }
 
 
