@@ -1,4 +1,4 @@
-import outsideClick from'./outsideclick.js'
+import outsideClick from'./outsideclick.js';
 export default function initMenuMobile(){
   const menuButton = document.querySelector('.hamburguer');
   const menuList = document.querySelector('.ul-menu');
@@ -13,6 +13,7 @@ export default function initMenuMobile(){
         menuList.classList.remove('ativo');
         menuButton.classList.remove('ativo');
       })
+   
 
     }
 
@@ -22,11 +23,11 @@ export default function initMenuMobile(){
  function moveScroll(event) {
   const {window} = event.path[1];
   setInterval(() => {
+    
   if(window.scrollY > 0 && window.innerWidth>= 840) {
         mostraAviso.classList.add('ativo');
         menuList.style.display = 'none';
-        menuButton.style.display = 'none';
-        
+        menuButton.style.display = 'none';    
   }
   if(window.scrollY <=0) {
     mostraAviso.classList.remove('ativo');
@@ -45,7 +46,8 @@ export default function initMenuMobile(){
   
  }
 
-document.addEventListener('scroll', moveScroll);
+
+ window.addEventListener('scroll', moveScroll);
 
     eventos.forEach((evento) => {
       menuButton.addEventListener(evento, openMenu);

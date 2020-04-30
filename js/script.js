@@ -1,5 +1,9 @@
 import initMenuMobile from  './modules/menu-mobile.js';
-import initmudaImagem from  './modules/muda-imagem.js';
+import initMudarImagem from './modules/mudar-imagem.js';
+import initScrollAnimation from './modules/scroll-animation.js';
 
 initMenuMobile();
-initmudaImagem();
+initMudarImagem();
+initScrollAnimation();
+
+
