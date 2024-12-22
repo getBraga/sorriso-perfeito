@@ -21,28 +21,31 @@ export default function initMenuMobile(){
     
   
  function moveScroll(event) {
-  const {window} = event.path[1];
-  setInterval(() => {
-    
-  if(window.scrollY > 0 && window.innerWidth>= 840) {
-        mostraAviso.classList.add('ativo');
-        menuList.style.display = 'none';
-        menuButton.style.display = 'none';    
-  }
-  if(window.scrollY <=0) {
-    mostraAviso.classList.remove('ativo');
-    menuList.style.display = 'block';
- 
-  }
-  if(window.scrollY <=0 && window.innerWidth <=839) {
-    menuButton.style.display = 'flex';
+  if(event.path && event.path[1]) {
+    const {window} = event.path[1];
+    setInterval(() => {
+      
+    if(window.scrollY > 0 && window.innerWidth>= 840) {
+          mostraAviso.classList.add('ativo');
+          menuList.style.display = 'none';
+          menuButton.style.display = 'none';    
+    }
+    if(window.scrollY <=0) {
+      mostraAviso.classList.remove('ativo');
+      menuList.style.display = 'block';
+   
+    }
+    if(window.scrollY <=0 && window.innerWidth <=839) {
+      menuButton.style.display = 'flex';
+    }
+  
+    if(window.scrollY <=0 && window.innerWidth >=840) {
+      menuButton.style.display = 'none';
+     
+    }
+  },0);
   }
 
-  if(window.scrollY <=0 && window.innerWidth >=840) {
-    menuButton.style.display = 'none';
-   
-  }
-},0);
   
  }
 
